@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SALTWRX LLC | Innovative IT Solutions</title>
+    <title>SALTWRX | Cybersecurity Consulting Firm</title>
     <style>
         :root {
-            --primary: #0a2540;
-            --accent: #00bfff;
+            --primary: #0a1f38;     /* Deeper navy */
+            --accent: #00a8e6;      /* Slightly darker cyan */
             --text: #333;
-            --light: #f8f9fa;
+            --light: #f4f6f9;       /* Light grey background */
+            --dark: #1a2a44;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background-color: #fff;
+            background-color: var(--light);
         }
         
         header {
-            background: linear-gradient(rgba(10, 37, 64, 0.95), rgba(10, 37, 64, 0.95)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 31, 56, 0.97), rgba(10, 31, 56, 0.97)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -46,9 +43,9 @@
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
         
         .nav-links {
@@ -64,13 +61,12 @@
             transition: color 0.3s;
         }
         
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+        .nav-links a:hover { color: var(--accent); }
         
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 31, 56, 0.88), rgba(10, 31, 56, 0.88)), 
+                        url('https://picsum.photos/id/201/1920/1080') center/cover no-repeat; /* Technical dark cyber image */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,38 +75,25 @@
             margin-top: 80px;
         }
         
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
+        .hero-content { max-width: 850px; padding: 2rem; }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-        }
+        .hero h1 { font-size: 3.4rem; margin-bottom: 1rem; line-height: 1.1; }
         
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
+        .hero p { font-size: 1.35rem; margin-bottom: 2rem; opacity: 0.95; }
         
         .btn {
             display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 14px 32px;
+            padding: 14px 34px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            border: none;
-            cursor: pointer;
         }
         
         .btn:hover {
-            background: #0099cc;
+            background: #0088cc;
             transform: translateY(-3px);
         }
         
@@ -123,19 +106,17 @@
         }
         
         h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             text-align: center;
             margin-bottom: 3rem;
             color: var(--primary);
         }
         
-        .about {
-            background-color: var(--light);
-        }
+        .about { background-color: white; }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
         
@@ -143,13 +124,11 @@
             background: white;
             border-radius: 12px;
             padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.09);
             transition: transform 0.3s;
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
+        .service-card:hover { transform: translateY(-10px); }
         
         .contact {
             background: var(--primary);
@@ -157,7 +136,7 @@
         }
         
         .contact form {
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto;
             display: grid;
             gap: 1.5rem;
@@ -165,13 +144,14 @@
         
         input, textarea {
             padding: 14px;
-            border: 1px solid #ccc;
+            border: 1px solid #555;
             border-radius: 8px;
             font-size: 1rem;
+            background: #f8f9fa;
         }
         
         footer {
-            background: #0a2540;
+            background: var(--dark);
             color: #aaa;
             text-align: center;
             padding: 3rem 0;
@@ -179,8 +159,8 @@
         }
         
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .nav-links { gap: 1rem; font-size: 0.95rem; }
+            .hero h1 { font-size: 2.7rem; }
+            .nav-links { gap: 1.2rem; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -200,62 +180,63 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Innovative IT Solutions for a Connected World</h1>
-            <p>This website is currently under construction.</p>
+            <h1>Cybersecurity Consulting Firm</h1>
+            <p>Protecting organizations with expert cybersecurity strategies and solutions. Based in DFW.</p>
             <a href="#contact" class="btn">Get In Touch</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About SALTWRX LLC</h2>
-        <p style="max-width: 800px; margin: 0 auto 3rem; text-align: center; font-size: 1.15rem;">
-            SALTWRX is currently under construction.
+        <h2>About SALTWRX</h2>
+        <p style="max-width: 820px; margin: 0 auto 3rem; text-align: center; font-size: 1.15rem;">
+            SALTWRX is a specialized Cybersecurity Consulting Firm with over <strong>20 years of hands-on experience</strong> in protecting critical digital assets. 
+            We deliver tailored security solutions that help organizations strengthen their defenses, reduce risk, and maintain compliance in an evolving threat landscape.
         </p>
         
-        <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; text-align: center;">
             <div>
                 <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Expertise</h3>
-                <p>Proven experience in IT consulting, systems integration, and digital transformation.</p>
+                <p>Certified in CISSP, PenTest+, Security+, and Linux+. Deep experience in penetration testing, risk assessment, and security architecture.</p>
             </div>
             <div>
                 <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Commitment</h3>
-                <p>Client-focused approach with emphasis on reliability, scalability, and long-term partnerships.</p>
+                <p>Client-focused approach emphasizing proactive defense, reliability, scalability, and long-term security partnerships.</p>
             </div>
             <div>
                 <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Location</h3>
-                <p>Serving clients across the United States.</p>
+                <p>Headquartered in the DFW area — serving clients across the United States.</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>Our Cybersecurity Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>IT Consulting & Strategy</h3>
-                <p>Expert guidance on technology roadmaps, digital transformation, and infrastructure optimization.</p>
+                <h3>Penetration Testing & Red Teaming</h3>
+                <p>Simulated attacks to identify vulnerabilities before malicious actors can exploit them.</p>
             </div>
             <div class="service-card">
-                <h3>Systems Integration</h3>
-                <p>Seamless integration of hardware, software, and cloud platforms to streamline operations.</p>
+                <h3>Security Assessments & Audits</h3>
+                <p>Comprehensive risk assessments, compliance reviews, and gap analysis for robust security posture.</p>
             </div>
             <div class="service-card">
-                <h3>Cybersecurity Solutions</h3>
-                <p>Comprehensive security assessments, threat protection, and compliance support.</p>
+                <h3>Incident Response & Forensics</h3>
+                <p>Rapid response to security breaches with expert investigation and recovery support.</p>
             </div>
             <div class="service-card">
-                <h3>Cloud Services</h3>
-                <p>Migration, management, and optimization of cloud infrastructure (AWS, Azure, Google Cloud).</p>
+                <h3>Cloud Security & Compliance</h3>
+                <p>Secure AWS, Azure, and Google Cloud environments with proper configuration and continuous monitoring.</p>
             </div>
             <div class="service-card">
-                <h3>Custom Software Development</h3>
-                <p>Bespoke applications and automation tools designed to meet your unique business needs.</p>
+                <h3>Security Architecture & Strategy</h3>
+                <p>Design and implementation of enterprise-grade security frameworks and zero-trust models.</p>
             </div>
             <div class="service-card">
-                <h3>Support & Maintenance</h3>
-                <p>Ongoing technical support, monitoring, and proactive maintenance services.</p>
+                <h3>Ongoing Security Monitoring & Training</h3>
+                <p>Proactive threat monitoring, employee security awareness training, and managed security services.</p>
             </div>
         </div>
     </section>
@@ -267,11 +248,12 @@
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <input type="text" id="company" placeholder="Company (Optional)">
-            <textarea id="message" rows="6" placeholder="How can we help you?" required></textarea>
-            <button type="submit" class="btn" style="width: 100%; background: #00bfff;">Send Message</button>
+            <textarea id="message" rows="6" placeholder="How can we help secure your organization?" required></textarea>
+            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
         </form>
         
         <div style="text-align: center; margin-top: 3rem; opacity: 0.9;">
+            <p><strong>DFW Area, Texas, USA</strong></p>
             <p>Email: info@saltwrx.org</p>
             <p>Phone: Available upon request</p>
         </div>
@@ -279,38 +261,36 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 SALTWRX LLC. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem;">Professional IT Services</p>
+        <p>&copy; 2026 SALTWRX. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">Cybersecurity Consulting • DFW</p>
     </footer>
 
     <script>
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
+        // Form handler
         function handleSubmit(e) {
             e.preventDefault();
-            const form = e.target;
             alert("Thank you! Your message has been received. We'll get back to you shortly.");
-            form.reset();
+            e.target.reset();
         }
 
+        // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 37, 64, 0.98)';
+                header.style.background = 'rgba(10, 31, 56, 0.98)';
             } else {
-                header.style.background = 'linear-gradient(rgba(10, 37, 64, 0.95), rgba(10, 37, 64, 0.95)), url("https://picsum.photos/id/1015/1920/1080") center/cover no-repeat';
+                header.style.background = 'linear-gradient(rgba(10, 31, 56, 0.97), rgba(10, 31, 56, 0.97)), url("https://picsum.photos/id/201/1920/1080") center/cover no-repeat';
             }
         });
     </script>
